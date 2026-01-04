@@ -24,19 +24,56 @@ This monorepo uses **Bun v1.3.0 workspaces** to manage multiple applications and
 
 ## 📁 Repository Structure
 
+```txt
 .
 ├── apps/
-│ ├── backend/ # Laravel 12 API + Admin (Filament)
-│ └── web/ # Next.js 16 frontend
+│   ├── backend/                 # Laravel 12 API + Filament Admin
+│   │   ├── app/                 # Core application code
+│   │   ├── bootstrap/
+│   │   ├── config/
+│   │   ├── database/
+│   │   ├── public/
+│   │   ├── resources/
+│   │   ├── routes/
+│   │   ├── storage/
+│   │   ├── tests/
+│   │   ├── composer.json
+│   │   ├── artisan
+│   │   └── ...                  # Standard Laravel structure
+│   │
+│   └── web/                     # Next.js 16 frontend application
+│       ├── src/
+│       │   ├── app/             # App Router pages/layouts
+│       │   ├── components/      # App-specific components
+│       │   ├── lib/             # Utilities/helpers
+│       │   └── styles/
+│       ├── public/
+│       ├── next.config.ts       # Includes transpilePackages config
+│       ├── package.json
+│       ├── tailwind.config.ts
+│       └── tsconfig.json
 │
 ├── packages/
-│ └── ui/ # Shared UI library (@yabasha/ui)
+│   └── ui/                      # Shared UI library (@yabasha/ui)
+│       ├── src/
+│       │   ├── components/      # Shared components (shadcn/ui style)
+│       │   ├── lib/
+│       │   │   └── utils.ts     # cn(), helpers, etc.
+│       │   └── index.ts         # Export surface
+│       ├── package.json
+│       ├── tsconfig.json
+│       └── tailwind.config.ts   # (optional) if needed for building
 │
-├── docker/ # Nginx + infra configs
-├── docker-compose.yml # Local development stack
-├── package.json # Root workspace orchestrator
+├── docker/
+│   └── nginx/
+│       └── default.conf         # Nginx config for Laravel
+│
+├── docker-compose.yml           # MySQL + Redis + Horizon + Nginx + Backend
+├── package.json                 # Root Bun workspaces + proxy scripts
 ├── bun.lock
-└── tsconfig.json # Shared TS base config
+├── tsconfig.json                # Base TS config shared by web + ui
+└── README.md
+```
 
 ---
 
