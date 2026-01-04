@@ -1,0 +1,85 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node / JS / TS
+node_modules/
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+coverage/
+.nyc_output/
+.npm/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Bun
+# bun.lockb is binary and should be committed if you use Bun as your package manager
+.bun/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+!.env.production
+!.env.staging
+
+# PHP / Laravel
+/vendor/
+/apps/backend/vendor/
+composer.phar
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+
+# Laravel Storage & Cache
+/storage/*.key
+/apps/backend/storage/*.key
+/apps/backend/storage/app/public
+/apps/backend/storage/framework/cache/data/*
+/apps/backend/storage/framework/sessions/*
+/apps/backend/storage/framework/testing/*
+/apps/backend/storage/framework/views/*
+/apps/backend/storage/logs/*
+!/apps/backend/storage/app/public/.gitignore
+!/apps/backend/storage/framework/cache/data/.gitignore
+!/apps/backend/storage/framework/sessions/.gitignore
+!/apps/backend/storage/framework/testing/.gitignore
+!/apps/backend/storage/framework/views/.gitignore
+!/apps/backend/storage/logs/.gitignore
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.project
+.classpath
+.settings/
+
+# OS Generated
+.Spotlight-V100
+.Trashes
+
+# Docker
+docker-compose.override.yml
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Vercel
+.vercel

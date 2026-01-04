@@ -1,0 +1,17 @@
+{
+  "name": "monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "cd apps/web && bun run build",
+    "dev": "cd apps/web && bun run dev",
+    "lint": "cd apps/web && bun run lint",
+    "ui:add": "cd packages/ui && bunx shadcn@latest add"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
