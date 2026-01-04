@@ -1,4 +1,4 @@
-# 🧱 Yabasha.dev Monorepo
+# 🧱 [Yabasha.dev](https://yabasha.dev) Monorepo
 
 A modern full-stack monorepo powered by **Bun workspaces**, combining a **Laravel 12 backend**, **Next.js 16 frontend**, and a **shared React UI library** built with **Tailwind + shadcn/ui**.
 
